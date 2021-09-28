@@ -1,0 +1,27 @@
+{
+  "name": "contract_workflow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "ganache-cli": "^6.12.2",
+    "solc": "^0.4.24",
+    "web3": "^1.5.3"
+  },
+  "devDependencies": {
+    "mocha": "^9.1.1"
+  },
+  "scripts": {
+	"compile": "node scripts/compile.js",
+	"pretest": "npm run compile",
+    "test": "mocha tests/",
+	"predeploy": "npm run compile",
+	"deploy": "node scripts/deploy.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
